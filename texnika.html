@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="texnika.css">
+    <title>ЭлектроМир — Интернет-магазин электроники</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logo-text"><h2>Электро<span>Мир</span></h2></div>
+            <nav>
+                <a href="#">Смартфоны</a>
+                <a href="#">Ноутбуки</a>
+                <a href="#">Телевизоры</a>
+                <a href="#">Аксессуары</a>
+            </nav>
+        </header>
+
+        <div class="categories-bar">
+            <span class="cat-badge active">Все товары</span>
+            <span class="cat-badge">Смартфоны</span>
+            <span class="cat-badge">Ноутбуки</span>
+            <span class="cat-badge">Телевизоры</span>
+        </div>
+
+        <div class="block">
+            <div class="card left-card">
+                <div class="discount">-7%</div>
+                <img src="c:\Users\user\Downloads\s-l1600.jpg">
+                <div class="card-info">
+                    <h3>iPhone 15 Pro Max 256GB Titanium Blue</h3>
+                    <p class="rating">★★★★★ (256)</p>
+                    <p class="price">139 990,00 ₽</p>
+                    <a href="#" class="btn-buy">В корзину</a>
+                </div>
+            </div>
+            <div class="card center-card">
+                <div class="discount" style="visibility: hidden;">-0%</div>
+                <img src="c:\Users\user\Downloads\b1.png">
+                <div class="card-info">
+                    <h3>Samsung Galaxy S24 Ultra 512GB Black</h3>
+                    <p class="rating">★★★★★ (189)</p>
+                    <p class="price">119 990,00 ₽</p>
+                    <a href="#" class="btn-buy">В корзину</a>
+                </div>
+            </div>
+            <div class="card right">
+                <div class="discount">-8%</div>
+                <img src="c:\Users\user\Downloads\343434_5.png">
+                <div class="card-info">
+                    <h3>MacBook Pro 14" M3 Pro 18GB/512GB</h3>
+                    <p class="rating">★★★★★ (142)</p>
+                    <p class="price">239 990,00 ₽</p>
+                    <a href="#" class="btn-buy">В корзину</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="left">
+            <p>ℹ️ <strong>О магазине:</strong> ЭлектроМир — ваш надежный гид в мире современных гаджетов. Только оригинальная техника с официальной гарантией.</p>
+        </aside>
+        <main>
+            <p>Широкий выбор современной техники по выгодным ценам. В нашем каталоге представлены самые свежие новинки от ведущих мировых брендов: Apple, Samsung, Sony и многих других. Обновите свои девайсы уже сегодня с быстрой доставкой до двери.</p>
+        </main>
+        <aside class="right">
+            <p>🔥 <strong>Акции:</strong> Специальные цены на всю линейку аксессуаров при покупке любого смартфона или ноутбука на этой неделе!</p>
+        </aside>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Электро<span>Мир</span></h2>
+                <p>Лучший сервис в Димитровграде</p>
+            </div>
+            <div class="footer-links">
+                <h4>Навигация</h4>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Каталог</a></li>
+                    <li><a href="#">Доставка</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Мы в сети</h4>
+                <div class="social-icons">
+                    <a href="#" class="icon">TG</a>
+                    <a href="#" class="icon">VK</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 верстка.</p>
+        </div>
+    </footer>
+</body>
+</html>
+<script>
+        const buyButtons = document.querySelectorAll('.btn-buy');
+
+        buyButtons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                
+                const card = button.closest('.card');
+                const productName = card.querySelector('h3').textContent;
+                
+                alert('Товар "' + productName + '" успешно добавлен в корзину!');
+                
+                button.textContent = 'Добавлено!';
+                button.style.backgroundColor = '#28a745'; 
+                button.style.color = '#fff';
+            });
+        });
+    </script>
+</body>
+</html>
